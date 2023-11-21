@@ -6,8 +6,12 @@ class Square:
     """Represent a square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize a new square."""
+        """Initialize a new square.
 
+        Args:
+            size (int): The size of the new square.
+            position (int, int): The position of the new square.
+        """
         self.size = size
         self.position = position
 
@@ -26,11 +30,10 @@ class Square:
 
     @property
     def position(self):
-        """get position of the square."""
+        """Get/set the current position of the square."""
         return (self.__position)
 
     @position.setter
-    """ set position"""
     def position(self, value):
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
@@ -40,8 +43,8 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Return area of the square."""
-        return (self.__size * self.__size)
+        """Return the current area of the square."""
+        return (self.__size ** 2)
 
     def my_print(self):
         """Print the square with the # character."""
