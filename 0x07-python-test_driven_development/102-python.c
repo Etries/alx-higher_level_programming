@@ -6,6 +6,7 @@
  */
 void print_python_string(PyObject *p)
 {
+
 	long int length;
 
 	fflush(stdout);
